@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+    <meta name="description" content="Providing Yummy delicious Bubble Tea" />
+    <meta name="keywords" content="food,lunch,delicious,nutrition" />
+
+    <meta name="csrf-token" content="jxCaGhVWfPE3RtKzGZIf76Ax5e52gUgrdfytezP8" />
+    <title>Whistler Bubble Tea</title>
+    <link rel="icon" type="image/png" href="media_66e278e06c4d9.png" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="spacing.css" />
+    <link rel="stylesheet" href="slick.css" />
+    <link rel="stylesheet" href="nice-select.css" />
+    <link rel="stylesheet" href="venobox.min.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="jquery.exzoom.css" />
+
+    <link rel="stylesheet" href="toastr.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="custom.css" />
+
+    <style>
+      :root {
+        --colorPrimary: #d6b3ff;
+      }
+    </style>
+
+    <!-- <link rel="stylesheet" href="css/rtl.css"> -->
+  </head>
+
+  <body>
+    <div class="overlay-container d-none">
+      <div class="overlay">
+        <span class="loader"></span>
+      </div>
+    </div>
+    <!--=============================
+        Cart Popup Modal Start
+    ==============================-->
+    <div class="fp__cart_popup">
+      <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body load_product_modal_body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=============================
+        Cart Popup Modal End
+    ==============================-->
+
+    <!--=============================
+        TOPBAR START
+    ==============================-->
+    <section class="fp__topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-md-8">
+            <ul class="fp__topbar_info d-flex flex-wrap">
+              <li>
+                <a href="mailto:order@whistlerbubbletea.com"><i class="fas fa-envelope"></i> order@whistlerbubbletea.com</a>
+              </li>
+              <li>
+                <a href="callto:(604) 906-2427"><i class="fas fa-phone-alt"></i> (604) 906-2427</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-6 col-md-4 d-none d-md-block">
+            <ul class="topbar_icon d-flex flex-wrap">
+              <li>
+                <a href="https://www.facebook.com/people/Whistler-BubbleTea/pfbid033KRsuSdf9AQzFMhn98oG9eHPv7x36QRfLJt63x4mZvBiDcd26ip6nzyG2wHQ2Waxl/?mibextid=LQQJ4d&amp;rdid=HDYBfNGYhdRIhj68&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FHaEE3UFhepzsGF9B%2F%3Fmibextid%3DLQQJ4d"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/whistlerbbt/?igsh=MTN6ODY5YnlxMTU0Zg%3D%3D"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=============================
+        TOPBAR END
+    ==============================-->
+
+    <!--=============================
+        MENU START
+    ==============================-->
+    <nav class="navbar navbar-expand-lg main_menu">
+      <div class="container">
+        <a class="navbar-brand" href="../">
+          <img src="logo.png" alt="whistlerbubbletea" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="far fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Menu </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact">Contact </a>
+            </li>
+          </ul>
+          <!-- <ul class="menu_icon d-flex flex-wrap">
+                <li>
+                    <a href="#" class="menu_search"><i class="far fa-search"></i></a>
+                    <div class="fp__search_form">
+                        <form action="https://cindyp17.sg-host.com/products" method="GET">
+                            <span class="close_search"><i class="far fa-times"></i></span>
+                            <input type="text" placeholder="Search . . ." name="search">
+                            <button type="submit">search</button>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <a class="cart_icon"><i class="fas fa-shopping-basket"></i> <span class="cart_count">0</span></a>
+                </li>
+                                <li>
+                    <a class="message_icon"
+                    href="https://cindyp17.sg-host.com/dashboard"
+                      >
+                      <i class="fas fa-comment-alt-dots"></i>
+
+                        <span class="sunseen-message-count">0</span>
+
+                      </a>
+                </li>
+                <li>
+                    <a href="https://cindyp17.sg-host.com/login"><i class="fas fa-user"></i></a>
+                </li>
+                <li>
+                    <a class="common_btn" href="#" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">reservation</a>
+                </li> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- <div class="fp__menu_cart_area">
+    <div class="fp__menu_cart_boody">
+        <div class="fp__menu_cart_header">
+            <h5>total item (<span class="cart_count" style="font-size: 16px">0</span>)</h5>
+            <span class="close_cart"><i class="fal fa-times"></i></span>
+        </div>
+        <ul class="cart_contents">
+            
+        </ul>
+        <p class="subtotal">sub total <span class="cart_subtotal">$0</span></p>
+        <a class="cart_view" href="https://cindyp17.sg-host.com/cart"> view cart</a>
+        
+    </div>
+</div> -->
+
+    <!--  -->
+
+    <!-- <div class="fp__reservation">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Book a Table</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="fp__reservation_form" action="https://cindyp17.sg-host.com/reservation" method="POST">
+                        <input type="hidden" name="_token" value="jxCaGhVWfPE3RtKzGZIf76Ax5e52gUgrdfytezP8" autocomplete="off">                        <input class="reservation_input" type="text" placeholder="Name" name="name">
+                        <input class="reservation_input" type="text" placeholder="Phone" name="phone">
+                        <input class="reservation_input" type="date" name="date">
+                        <select class="reservation_input nice-select" name="time">
+                            <option value="">select time</option>
+                                                        <option value="9:00 AM-10:00 AM">9:00 AM to 10:00 AM</option>
+                                                        <option value="11:00 AM-12:00 AM">11:00 AM to 12:00 AM</option>
+                                                        <option value="1:00 PM-2:00 PM">1:00 PM to 2:00 PM</option>
+                                                        <option value="3:00 PM-4:00 PM">3:00 PM to 4:00 PM</option>
+                                                        <option value="5:00 PM-6:00 PM">5:00 PM to 6:00 PM</option>
+                                                    </select>
+                        <input class="reservation_input" type="text" placeholder="Persons" name="persons">
+                        <button type="submit" class="btn_submit">book table</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+    <!--  -->
+    <!--=============================
+        MENU END
+    ==============================-->
+
+    <!--=============================
+        BREADCRUMB START
+    ==============================-->
+    <section class="fp__breadcrumb" style="background: url('bubbleteabreadcrumb.jpg')">
+      <div class="fp__breadcrumb_overlay">
+        <div class="container">
+          <div class="fp__breadcrumb_text">
+            <h1>Products</h1>
+            <ul>
+              <li><a href="../">home</a></li>
+              <li><a href="javascript:">products</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=============================
+        BREADCRUMB END
+    ==============================-->
+
+    <!--=============================
+        SEARCH MENU START
+    ==============================-->
+    <section class="fp__search_menu mt_120 xs_mt_90 mb_100 xs_mb_70">
+      <div class="container">
+        <!-- <form class="fp__search_menu_form" method="GET" action="https://cindyp17.sg-host.com/products">
+                <div class="row">
+                    <div class="col-xl-6 col-md-5">
+                        <input type="text" placeholder="Search..." name="search" value="">
+                    </div>
+                    <div class="col-xl-4 col-md-4">
+                        <select class="nice-select" name="category">
+                            <option value="" selected="">All</option>
+                                                            <option value="milk-fruit-tea">Milk Fruit Tea</option>
+                                                            <option value="fruity-tea-series">Fruity Tea Series</option>
+                                                            <option value="creamy-series">Creamy Series</option>
+                            
+                        </select>
+                    </div>
+                    <div class="col-xl-2 col-md-3">
+                        <button type="submit" class="common_btn">search</button>
+                    </div>
+                </div>
+            </form> -->
+
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f20fb8bf4cd.jpg" alt="Lychee Peach Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Lychee Peach Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f20cbe23402.jpg" alt="Mango Peach Fruit Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Mango Peach Fruit Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f20c6272a64.jpg" alt="Peach Fruit Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Peach Fruit Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f20bf27c051.jpg" alt="Pineapple Fruit Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Pineapple Fruit Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f20b4c5efe7.jpg" alt="Passionfruit Fruit Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Passionfruit Fruit Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f2099963a13.jpg" alt="Original Thai Milk Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Creamy Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Original Thai Milk Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66f210072a8c7.png" alt="Thai Green Tea" class="img-fluid w-100" />
+                <a class="category" href="#">Creamy Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Thai Green Tea</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e5c2c0a6beb.png" alt="Mango Fruit Tea w/ Popping Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Mango Fruit Tea w/ Popping Pearls</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e5c26291f10.png" alt="Strawberry Fruit Tea w/ Popping Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Strawberry Fruit Tea w/ Popping Pearls</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e5c1e6c6109.png" alt="Honeydew Milk Tea w/ Popping Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Milk Fruit Tea</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Honeydew Milk Tea w/ Popping Pearls</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e5c172024bb.png" alt="Brown Sugar Milk Tea w/ Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Creamy Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Brown Sugar Milk Tea w/ Pearls</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 wow fadeInUp" data-wow-duration="1s">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e5c1146cf3e.png" alt="Strawberry Milk Tea w/ Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Milk Fruit Tea</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <a class="title" href="">Strawberry Milk Tea w/ Pearls</a>
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 col-lg-4 milk-fruit-tea">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e4f7ecc0774.png" alt="Mango Milk Tea w/ Popping Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Milk Fruit Tea</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <span class="title">Mango Milk Tea w/ Popping Pearls</span>
+
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="javascript:"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col-xl-3 col-sm-6 col-lg-4 fruity-tea-series">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e3de060fc26.png" alt="Lychee Fruit Tea w/ Popping Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Fruity Tea Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <span class="title">Lychee Fruit Tea w/ Popping Pearls</span>
+
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="javascript:"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+<div class="col-xl-3 col-sm-6 col-lg-4 creamy-series">
+            <div class="fp__menu_item">
+              <div class="fp__menu_item_img">
+                <img src="media_66e4f82a43d48.png" alt="Taro Milk Tea w/ Pearls" class="img-fluid w-100" />
+                <a class="category" href="#">Creamy Series</a>
+              </div>
+              <div class="fp__menu_item_text">
+                <span class="title">Taro Milk Tea w/ Pearls</span>
+
+                <h5 class="price">
+                  $7
+                  <del>$10</del>
+                </h5>
+                <ul class="d-flex flex-wrap justify-content-center">
+                  <li>
+                    <a href="javascript:"><i class="fas fa-shopping-basket"></i></a>
+                  </li>
+                  <li>
+                    <a href="javascript:"><i class="fal fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="far fa-eye"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!--<div class="fp__pagination mt_60">-->
+        <!--  <div class="row">-->
+        <!--    <div class="col-12">-->
+        <!--      <nav>-->
+        <!--        <ul class="pagination">-->
+        <!--          <li class="page-item disabled" aria-disabled="true" aria-label="« Previous">-->
+        <!--            <span class="page-link" aria-hidden="true">‹</span>-->
+        <!--          </li>-->
+
+        <!--          <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>-->
+        <!--          <li class="page-item"><a class="page-link" href="/products?page=2">2</a></li>-->
+
+        <!--          <li class="page-item">-->
+        <!--            <a class="page-link" href="/products?page=2" rel="next" aria-label="Next »">›</a>-->
+        <!--          </li>-->
+        <!--        </ul>-->
+        <!--      </nav>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--</div>-->
+      </div>
+    </section>
+
+    <!--=============================
+        FOOTER START
+    ==============================-->
+    <footer>
+      <div class="footer_overlay pt_100 xs_pt_70 pb_100 xs_pb_70">
+        <div class="container wow fadeInUp" data-wow-duration="1s">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 col-sm-8 col-md-6">
+              <div class="fp__footer_content">
+                <a class="footer_logo" href="../">
+                  <img src="media_66e278e06ab39.png" alt="whistlerbubbletea" class="img-fluid w-100" />
+                </a>
+                <span>Whistler's freshest bubble tea. Take deliciousness with you on your adventures.</span>
+                <p class="info"><i class="far fa-map-marker-alt"></i> 4359 Main St, Whistler, BC V8E 1B5</p>
+                <a class="info" href="callto:(604) 906-2427"><i class="fas fa-phone-alt"></i> (604) 906-2427</a>
+                <a class="info" href="mailto:bubbleteawhistler@gmail.com"><i class="fas fa-envelope"></i> bubbleteawhistler@gmail.com</a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-md-6">
+              <div class="fp__footer_content">
+                <h3>Short Link</h3>
+                <ul>
+                  <li><a href="../contact">Contact</a></li>
+                  <li><a href="../">Home</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="col-lg-2 col-sm-4 col-md-6 order-sm-4 order-lg-3">
+                    <div class="fp__footer_content">
+                        <h3>Help Link</h3>
+                        <ul>
+                                                        <li><a href="/">Blogs</a></li>
+                                                        <li><a href="/">Chefs</a></li>
+                                                        <li><a href="/">Privacy Policy</a></li>
+                                                        <li><a href="/">Terms and Conditions</a></li>
+                                                        <li><a href="/">More</a></li>
+                                                    </ul>
+                    </div>
+                </div> -->
+            <div class="col-lg-3 col-sm-8 col-md-6 order-lg-4">
+              <div class="fp__footer_content">
+                <!-- <h3>subscribe</h3>
+                        <form class="subscribe_form">
+                            <input type="hidden" name="_token" value="jxCaGhVWfPE3RtKzGZIf76Ax5e52gUgrdfytezP8" autocomplete="off">                            <input type="text" placeholder="Subscribe" name="email">
+                            <button type="submit" class="subscribe_btn">Subscribe</button>
+                        </form> -->
+                <div class="fp__footer_social_link">
+                  <h5>follow us:</h5>
+                  <ul class="d-flex flex-wrap">
+                    <li>
+                      <a href="https://www.facebook.com/people/Whistler-BubbleTea/pfbid033KRsuSdf9AQzFMhn98oG9eHPv7x36QRfLJt63x4mZvBiDcd26ip6nzyG2wHQ2Waxl/?mibextid=LQQJ4d&amp;rdid=HDYBfNGYhdRIhj68&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FHaEE3UFhepzsGF9B%2F%3Fmibextid%3DLQQJ4d"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/whistlerbbt/?igsh=MTN6ODY5YnlxMTU0Zg%3D%3D"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fp__footer_bottom d-flex flex-wrap">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="fp__footer_bottom_text d-flex flex-wrap justify-content-between">
+                <p>Copyright 2024 Whistler Bubble Tea</p>
+                <ul class="d-flex flex-wrap">
+                  <li><a href="../contact">Contact</a></li>
+                  <!-- <li><a href="https://cindyp17.sg-host.com/">About</a></li>
+                  <li><a href="https://cindyp17.sg-host.com/">Blogs</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  -->
+    <!--=============================
+        FOOTER END
+    ==============================-->
+
+    <!--=============================
+        SCROLL BUTTON START
+    ==============================-->
+    <div class="fp__scroll_btn">go to top</div>
+    <!--=============================
+        SCROLL BUTTON END
+    ==============================-->
+
+    <!--jquery library js-->
+
+    <!--bootstrap js-->
+
+    <!--font-awesome js-->
+
+    <!-- slick slider -->
+
+    <!-- isotop js -->
+
+    <!-- simplyCountdownjs -->
+
+    <!-- counter up js -->
+
+    <!-- nice select js -->
+
+    <!-- venobox js -->
+
+    <!-- sticky sidebar js -->
+
+    <!-- wow js -->
+
+    <!-- ex zoom js -->
+
+    <!--main/custom js-->
+
+    <!-- show dynamic validation message-->
+
+    <!-- Load global js -->
+  </body>
+</html>
